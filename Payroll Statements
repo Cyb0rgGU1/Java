@@ -1,0 +1,76 @@
+/* Financial application - payroll 
+
+	Prints payroll statement(s) */
+
+import java.util.Scanner;
+public class Exercise4
+
+{	public static void main(String[] args) {
+
+		// User input
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter employee's name: ");
+		String name= input.nextLine();
+
+		System.out.print("Enter how many hours were worked in the week: ");
+		double hoursWorked = input.nextDouble(); 
+		
+		/* User input finished; 
+		   Further down part of calculations */
+
+		System.out.print("Enter the hourly rate: ");
+		double hourlyRate = input.nextDouble();
+
+		// Variable a to save space at the end 
+
+		String a=name + " worked " + hoursWorked + " hours at $" + hourlyRate + " this week.";
+
+		System.out.print("Enter the federal tax withholding rate: ");
+		double fedTaxRate = input.nextDouble();
+
+		System.out.print("Enter the state tax withholding rate: ");
+		double stateTaxRate = input.nextDouble();
+
+		/* Defining variables and calculations:
+
+			Gross pay
+			Federal Witholding
+			State withholding 
+			Total Deduction
+			Net pay
+
+		*/
+
+		double GrossPay = hoursWorked * hourlyRate;
+		double FederalWithholding = GrossPay * fedTaxRate;
+		double StateWitholding = GrossPay * stateTaxRate;
+
+		double TotalDeduction = FederalWithholding + StateWitholding;
+		double NetPay = GrossPay - TotalDeduction;
+
+		// Assigning variables: 
+
+		String b=name + " made $" + GrossPay + " before taxes.";
+
+		String c=name + " federal witholding is $" + FederalWithholding;
+
+		String d=name + " state witholding is $" + StateWitholding;
+
+		String e="For a total deduction of: $" + TotalDeduction;
+
+		String f=name + " has a total of $" + NetPay + " for netpay."; 
+
+		// Output of user's information: 
+
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
+		System.out.println(f);
+
+
+	}
+}
