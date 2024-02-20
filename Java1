@@ -1,4 +1,4 @@
-// Just a simple program 
+/* Simple Program */
 
 class Hello {
   public static void main(String[] args) {
