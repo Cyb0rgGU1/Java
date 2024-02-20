@@ -1,4 +1,5 @@
-/* Computes future investment value at a given annual RoR for a specified number of years. 
+/* 
+* Computes future investment value at a given annual RoR for a specified number of years. 
 */
 
 import java.util.Scanner;
@@ -19,13 +20,14 @@ public class CourseProject
 
 		System.out.println("Years InvestingValue");
 		for(int i = 1; i <= year; i++)
-		{
+	{
 			int formatter = 30;
 		if (i >= 10) formatter = 29;
 		System.out.printf(i + "%"+formatter+".2f\n", futureInvestmentValue(investment, rate/12, i));
 		}
 	}
-public static double futureInvestmentValue (double InvestAmount, double annualRoR, int years) // Using method header as instructed 
+public static double futureInvestmentValue (double InvestAmount, double annualRoR, int years) 
+/* Using method header as instructed */
 	{
 		return investmentAmount * Math.pow(1 + monthlyInterestRate, years * 12);
 	}
