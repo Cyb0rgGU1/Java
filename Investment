@@ -26,8 +26,8 @@ public class CourseProject
 		System.out.printf(i + "%"+formatter+".2f\n", futureInvestmentValue(investment, rate/12, i));
 		}
 	}
-public static double futureInvestmentValue (double InvestAmount, double annualRoR, int years) 
 /* Using method header as instructed */
+public static double futureInvestmentValue (double InvestAmount, double annualRoR, int years) 
 	{
 		return investmentAmount * Math.pow(1 + monthlyInterestRate, years * 12);
 	}
